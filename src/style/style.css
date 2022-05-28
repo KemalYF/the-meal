@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to left, rgb(148, 106, 43), rgb(78, 45, 4));
+}
+
+main {
+    width: 90%;
+    max-width: 950px;
+    margin: 10px auto;
+}
+
+meal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 35px;
+    width: 100%;
+    padding: 10px;
+}
+
+.clock {
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(28, 10, 0), rgb(54, 21, 0));
+    padding: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.clock > .time {
+    font-size: 20px;
+    margin: 0 auto;
+}
+ 
+.clock > .date {
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 8%;
+    text-align: center;
+}
+
+@media screen and (min-width: 560px) and (max-width: 1039px) {
+    footer {
+        display: flex;
+        position: fixed;
+        width: 9%;
+        z-index: -1;
+    }
+
+    .clock > .time {
+        font-size: 13px;
+    }
+     
+    .clock > .date {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    footer {
+        display: inline;
+        position: relative;
+        top: 14.1em;
+        z-index: -1;
+    }
+}
